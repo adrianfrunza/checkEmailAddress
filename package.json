@@ -1,14 +1,14 @@
 {
-  "name": "personal-project",
+  "name": "Email Validator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.tsx",
   "scripts": {
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server"
   },
-  "author": "",
+  "author": "Adrian Frunza",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.4",
