@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",        // path to output directory
+        "sourceMap": true,          // allow sourcemap support
+        "module": "es6",            // specify module code generation
+        "jsx": "react",             // use typescript to transpile jsx to js
+        "target": "es5",            // specify ECMAScript target version
+        "moduleResolution": "node",
+        "experimentalDecorators": true
+
+    },
+    "include": [
+        "./src/"
+    ]
+}
