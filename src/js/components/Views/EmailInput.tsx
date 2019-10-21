@@ -4,15 +4,23 @@ import { observer } from "mobx-react";
 import { ApiSDK } from "../../apiSDK/ApiSDK";
 
 export const EmailInput = observer(
-    (props: { emailInputViewController: EmailInputViewController, apiSDK: ApiSDK }) => (
-        <div id="emailInput">
-            <input
-                type="email"
-                value={props.emailInputViewController.email}
-                onChange={props.emailInputViewController.updateEmail}
-            />
-            <div>{`${props.emailInputViewController.isValid}`}</div>
-            <button onClick={props.emailInputViewController.onSubmit}>Check email address</button>
-        </div>
-    )
+    (props: {
+        emailInputViewController: EmailInputViewController;
+        apiSDK: ApiSDK;
+    }) => (
+            <div id="emailInput">
+                <input
+                    type="email"
+                    value={props.emailInputViewController.email}
+                    onChange={props.emailInputViewController.updateEmail}
+                    onKeyPress={props.emailInputViewController.onKeySubmit}
+                />
+                <div>{`${props.emailInputViewController.isValid}`}</div>
+                <button
+                    onClick={props.emailInputViewController.onSubmit}
+                >
+                    Check email address
+      </button>
+            </div>
+        )
 );

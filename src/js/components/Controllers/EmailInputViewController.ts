@@ -13,11 +13,19 @@ export class EmailInputViewController {
     }
 
     public updateEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
-        this.email = event.target.value.toString();
+        this.email = event.target.value.toString().toLowerCase();
     }
 
     public onSubmit = async () => {
+        this.isValid = '';
         void await this.apiSDK.verifyEmail(this.email);
         this.isValid  = this.apiSDK.response;
     }
+
+    public onKeySubmit = async (key: React.KeyboardEvent<HTMLInputElement>) => {
+        if(key.charCode == 13) {
+            this.onSubmit();
+        }
+    }
+
 }
